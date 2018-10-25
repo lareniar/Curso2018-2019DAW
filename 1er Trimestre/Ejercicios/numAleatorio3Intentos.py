@@ -6,7 +6,7 @@ y = int(input("\nInserta un número para manipular a la máquina: "))
 intentos = 3
 #En el loop empezamos a restar los intentos y mostramos la cantidad restante
 while x != y:
-    intentos = intentos - 1
+    intentos -= 1
     print("\nTe quedan", intentos, "intento(s).")
 #en el caso de que intentos llegue a cero, rompemos el loop con el break
     if intentos == 0:

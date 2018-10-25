@@ -6,7 +6,7 @@ y = int(input("\nInserta un número para manipular a la máquina: "))
 intentos = 3
 #En el loop empezamos a restar los intentos y mostramos la cantidad restante
 while x != y:
-    intentos = intentos - 1
+    intentos -= 1
     #Aquí pondremos las pistas
     if x > y:
         print("\nTu numero es menor.")
