@@ -5,7 +5,6 @@ primeros números impares, Por ejemplo: 5(2) = 1 + 3 + 5 + 7 + 9 = 25 """
 
 
 x = int(input("Inserta un número: "))
-y = x
 x = x * x
 sumaN = -1
 resultado = False
