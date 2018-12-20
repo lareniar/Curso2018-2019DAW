@@ -10,3 +10,5 @@ suma = 0
 for i in range(lista):
     suma = suma + lista[i]
 print("\n", suma)
+
+
