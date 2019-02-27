@@ -21,7 +21,7 @@ class Jugador:
     self.__puntuacion = 0
   
   def __str__(self):
-    return str((self.__nombre, " " , self.__tipo_ficha , " ", self.__puntuacion))
+    return ("Jugador "self.__nombre + ", ficha" + self.__tipo_ficha + ". Victorias: " + str(self.__puntuacion))
   
   def get_nombre(self) :
     return self.__nombre
