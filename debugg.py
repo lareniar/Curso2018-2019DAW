@@ -21,7 +21,7 @@ class Jugador:
     self.__puntuacion = 0
   
   def __str__(self):
-    return (self.__nombre + " " + self.__tipo_ficha + " "+ self.__puntuacion)
+    return str((self.__nombre, " " , self.__tipo_ficha , " ", self.__puntuacion))
   
   def get_nombre(self) :
     return self.__nombre
@@ -134,8 +134,8 @@ class Partida:
      self.__tablero = Tablero()
 
     # Crear jugadores
-     nombre1 = input("dame el nombre del Jugador 1 (ficha X)")
-     nombre2 = input("dame el nombre del Jugador 2 (ficha O)")
+     nombre1 = input("dame el nombre del Jugador 1 (ficha X): ")
+     nombre2 = input("dame el nombre del Jugador 2 (ficha O): ")
 
      self.__jugador1 = Jugador(nombre1,"X")
      self.__jugador2 = Jugador(nombre2, "0")
@@ -155,8 +155,21 @@ class Partida:
 
       if (isinstance(jugador,Jugador)):
         print ("jugador " + jugador.get_nombre() + " elige celda")
-        i = int(input("fila"))
-        j = int(input("columna"))
+        right = False
+        while right == False:
+          try:
+            i = int(input("fila"))
+            right = True
+          except ValueError:
+            print("Vuelve a meter un valor dentro de las coordenadas")
+
+        right = False
+        while right == False:
+          try:
+            j = int(input("columna"))
+            right = True
+          except ValueError:
+            print("Vuelve a meter un valor dentro de las coordenadas")  
 
       try:
         self.__tablero.poner_ficha(i,j,jugador.get_tipo_ficha())
